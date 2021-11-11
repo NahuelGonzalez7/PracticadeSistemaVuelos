@@ -1,0 +1,20 @@
+﻿@model SistemaWebVuelos.Models.Vuelo
+
+@{
+    ViewBag.Title="Detail";
+}
+
+<fieldset>
+
+    <legend> <b> Vuelos Detail </b> </legend>
+
+</fieldset>
+
+<p> <b> @Html.DisplayNameFor(model => model.ID): </b> @Html.DisplayFor(model => model.ID)</p>
+<p> <b> @Html.DisplayNameFor(model => model.Fecha): </b> @Html.DisplayFor(model => model.Fecha)</p>
+<p> <b> @Html.DisplayNameFor(model => model.Destino): </b> @Html.DisplayFor(model => model.Destino)</p>
+<p> <b> @Html.DisplayNameFor(model => model.Origen): </b> @Html.DisplayFor(model => model.Origen) </p>
+<p> <b> @Html.DisplayNameFor(model => model.Matricula): </b> @Html.DisplayFor(model => model.Matricula) </p>
+
+<p> @Html.ActionLink("Back to Index", "Index", "Vuelo") </p>
+

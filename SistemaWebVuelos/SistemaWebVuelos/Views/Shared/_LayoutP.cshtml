@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/main.css" rel="stylesheet" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div id="total">
+        <header>
+            <h1> SISTEMA VUELOS </h1>
+        </header>
+
+        <nav>
+            @Html.ActionLink("Home", "Index", "Home")
+            @Html.ActionLink("Vuelos", "Index", "Vuelo")
+        </nav>
+
+        <main>
+            <sidebar>
+                @if (IsSectionDefined("izq"))
+                {
+                    @RenderSection("izq")
+                }
+                else
+                {
+                    <img src="~/Images/aeropuertos.jpg" />
+                }
+            </sidebar>
+
+            <content>
+                @RenderBody()
+            </content>
+        </main>
+
+        <footer>
+            <p> Info@flight.com </p>
+        </footer>
+
+    </div>
+</body>
+</html>
